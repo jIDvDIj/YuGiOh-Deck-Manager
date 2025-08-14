@@ -8,7 +8,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public record CardService(CardRepository cardRepository) {
+public class CardService {
+
+    private final CardRepository cardRepository;
+
+    public CardService(CardRepository cardRepository) {
+        this.cardRepository = cardRepository;
+    }
 
     public List<Card> getAll() {
         return cardRepository.findAll();

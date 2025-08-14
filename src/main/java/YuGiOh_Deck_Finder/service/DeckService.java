@@ -1,8 +1,7 @@
 package YuGiOh_Deck_Finder.service;
 
 import YuGiOh_Deck_Finder.model.Deck;
-import YuGiOh_Deck_Finder.repository.DeckRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import YuGiOh_Deck_Finder.repository.DeckRepository;;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.Optional;
     @Service
     public class DeckService {
 
-        @Autowired
-        private DeckRepository deckRepository;
+        private final DeckRepository deckRepository;
+
+        public DeckService(DeckRepository deckRepository) {
+            this.deckRepository = deckRepository;
+        }
 
         public Deck save(Deck deck) {
             return deckRepository.save(deck);

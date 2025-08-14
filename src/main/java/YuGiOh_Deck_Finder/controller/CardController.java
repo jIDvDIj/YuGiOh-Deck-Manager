@@ -26,4 +26,16 @@ public class CardController {
     public Card create(@RequestBody Card card){
         return cardService.save(card);
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        cardService.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public Card update(@PathVariable Long id, @RequestBody Card card) {
+        card.setId(id);
+        return cardService.save(card);
+    }
 }
+
