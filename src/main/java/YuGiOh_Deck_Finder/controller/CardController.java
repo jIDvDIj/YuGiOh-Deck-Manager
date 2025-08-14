@@ -1,7 +1,7 @@
-package dev.java.YuGiOh_Deck_Finder.controller;
+package YuGiOh_Deck_Finder.controller;
 
-import dev.java.YuGiOh_Deck_Finder.model.Card;
-import dev.java.YuGiOh_Deck_Finder.service.CardService;
+import YuGiOh_Deck_Finder.model.Card;
+import YuGiOh_Deck_Finder.service.CardService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

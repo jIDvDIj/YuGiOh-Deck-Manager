@@ -1,10 +1,3 @@
-Query SQL para inserir uma Apple na tabela card:
-
-  INSERT INTO card (name, descricao, nivel, tipo)
-  VALUES ('Dragon', 'aaaaaa', 10, 'pedra');
-  
-  // application.yml
-  /*
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
